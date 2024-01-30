@@ -40,6 +40,7 @@ class Game {
     }
 
     setEventListeners() {
+        // new comment
         document.onkeydown = event => {
 
             const key = event.key
