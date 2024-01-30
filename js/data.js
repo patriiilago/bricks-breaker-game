@@ -1,6 +1,3 @@
-
-
-
 let bricksData = [
     {
         posLeft: 100,

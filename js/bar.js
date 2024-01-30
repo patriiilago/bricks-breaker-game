@@ -3,6 +3,7 @@ class Bar {
         this.gameScreen = gameScreen
         this.gameSize = gameSize
 
+
         this.barSize = {
             width: 300,
             height: 10
@@ -36,6 +37,14 @@ class Bar {
     moveBar() {
         this.left += this.barDirection
         this.updateBarPosition()
+    }
+
+    moveLeft() {
+        console.log('MOVIENDOOOO')
+    }
+
+    moveRight() {
+        console.log('MOVIENDOOOO')
     }
 
     updateBarPosition() {

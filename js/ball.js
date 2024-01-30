@@ -3,6 +3,7 @@ class Ball {
         this.gameScreen = gameScreen
         this.gameSize = gameSize
 
+
         this.ballSize = {
             width: 30,
             height: 30

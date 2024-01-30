@@ -9,6 +9,7 @@ window.onload = function () {
 
     }
 
+
     startGame()
 
 }

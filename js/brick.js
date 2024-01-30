@@ -3,6 +3,7 @@ class Brick {
         this.gameScreen = gameScreen
         this.gameSize = gameSize
 
+
         this.bricksSize = {
             width: 100,
             height: 40

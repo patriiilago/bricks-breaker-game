@@ -24,8 +24,8 @@ class Game {
     start() {
         this.setGameDimensions()
         this.createElements()
-
-
+        this.setEventListeners()
+        this.startGameLoop()
     }
 
     setGameDimensions() {
@@ -39,15 +39,32 @@ class Game {
         this.createBricks()
     }
 
+    setEventListeners() {
+        document.onkeydown = event => {
+            const key = event.key
+
+            if (key === 'ArrowLeft') this.bar.moveLeft()
+            if (key === 'ArrowRight') this.bar.moveRight()
+        }
+    }
+
 
     createBricks() {
 
         bricksData.forEach((eachBrick) => {
-
             const newBrick = new Brick(this.gameScreen, this.gameSize, eachBrick.posLeft, eachBrick.posTop, eachBrick.color)
             this.bricks.push(newBrick)
         })
+    }
 
+    startGameLoop() {
+        this.gameInterval = setInterval(() => {
+            this.updateAll()
+        }, 60)
+    }
+
+    updateAll() {
+        this.bar.moveBar()
     }
 
 
