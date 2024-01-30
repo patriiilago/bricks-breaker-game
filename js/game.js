@@ -40,10 +40,9 @@ class Game {
     }
 
     setEventListeners() {
-        // new comment
         document.onkeydown = event => {
 
-            const key = event.key
+            const key = event.key       // key property is the name of the pressed key
 
             if (key === 'ArrowLeft') this.bar.moveLeft()
             if (key === 'ArrowRight') this.bar.moveRight()
