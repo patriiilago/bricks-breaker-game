@@ -41,6 +41,7 @@ class Game {
 
     setEventListeners() {
         document.onkeydown = event => {
+
             const key = event.key
 
             if (key === 'ArrowLeft') this.bar.moveLeft()
