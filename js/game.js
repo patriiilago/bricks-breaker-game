@@ -1,6 +1,8 @@
 class Game {
     constructor() {
 
+        // vamos a liarla
+
         this.startScreen = document.querySelector("#game-start")
         this.gameScreen = document.querySelector("#game-screen")
         this.gameEndScreen = document.querySelector("#game-over")
