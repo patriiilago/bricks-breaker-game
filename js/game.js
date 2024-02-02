@@ -1,14 +1,17 @@
 class Game {
     constructor() {
 
-        // vamos a liarla
-
         this.startScreen = document.querySelector("#game-start")
         this.gameScreen = document.querySelector("#game-screen")
         this.gameEndScreen = document.querySelector("#game-over")
+        this.reStartButton = document.querySelector("#restart-button")
+        this.countPointsElements = document.querySelector("#score")
+
+
+        this.countPoints = 0
 
         this.gameSize = {
-            width: window.innerWidth,
+            width: 1260,
             height: window.innerHeight
         }
 
@@ -18,9 +21,10 @@ class Game {
         // this.score = 0;
         // this.rounds = 0;
         this.lives = 1;
-        this.gameIsOver = false;
-        this.gameIntervalId;
-        this.gameLoopFrequency = Math.round(1000 / 100);
+        this.gameOver = false;
+        this.gameInterval;
+        this.gameLoopFrequency = Math.round(1000 / 50);
+        // this.gameEndScreen.style.display = "none"
     }
 
     start() {
@@ -37,15 +41,14 @@ class Game {
 
     createElements() {
         this.bar = new Bar(this.gameScreen, this.gameSize)
-        this.ball = new Ball(this.gameScreen, this.gameSize)
+        this.ball = new Ball(this.gameScreen, this.gameSize, this.bar, this.bricks)
         this.createBricks()
     }
 
     setEventListeners() {
         document.onkeydown = event => {
 
-            const key = event.key       // key property is the name of the pressed key
-
+            const key = event.key
             if (key === 'ArrowLeft') this.bar.moveLeft()
             if (key === 'ArrowRight') this.bar.moveRight()
         }
@@ -63,14 +66,34 @@ class Game {
     startGameLoop() {
         this.gameInterval = setInterval(() => {
             this.updateAll()
-        }, 60)
+            this.checkCollision()
+        }, 0)
     }
 
     updateAll() {
         this.bar.moveBar()
+        this.ball.moveBall()
+        this.displayPoints()
     }
 
+    checkCollision() {
+        for (let i = 0; i < this.bricks.length; i++) {
+            if (this.ball.hasCollided(this.bricks[i])) {
+                this.bricks[i].element.remove()
+                this.bricks.splice(i, 1)
+                this.ball.ballDirection.top = -this.ball.ballDirection.top
+                this.pointCount()
+                // this.ball.ballDirection.left = -this.ball.ballDirection.left
+            }
+        }
+    }
 
+    displayPoints() {
+        this.countPointsElements.innerHTML = `${this.countPoints} points`
+
+    }
+    pointCount() {
+        this.countPoints += 10
+        this.displayPoints()
+    }
 }
-
-

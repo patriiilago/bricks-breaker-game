@@ -6,7 +6,7 @@ class Bar {
 
         this.barSize = {
             width: 300,
-            height: 10
+            height: 10,
         }
 
         this.barPosition = {
@@ -35,16 +35,28 @@ class Bar {
     }
 
     moveBar() {
-        this.left += this.barDirection
+        this.barPosition.left += this.barDirection.left
+        if (this.barPosition.left < 0) {
+            this.barPosition.left = 0
+            this.barDirection.left = 1
+        }
+        if (this.barPosition.left > this.gameSize.width - this.barSize.width) {
+            this.barPosition.left = this.gameSize.width - this.barSize.width
+            this.barDirection.left = -1
+        }
+
         this.updateBarPosition()
     }
 
     moveLeft() {
-        console.log('MOVIENDOOOO')
+
+        this.barDirection.left = -3
+
     }
 
     moveRight() {
-        console.log('MOVIENDOOOO')
+
+        this.barDirection.left = 3
     }
 
     updateBarPosition() {

@@ -5,27 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Reventa Bloques</title>
+    <title>Bricks Breaker</title>
 </head>
 
 <body>
+    <audio id="music" autoplay loop controls src="audio/arcade-tragic-hero.ogg" type="audio.mpeg"></audio>
+    <!-- <audio id="gameovermusic" autoplay loop controls src="audio/GAMEOVER.wav" type="audio.mpeg"></audio> -->
     <main>
-        <!-- <div id="game-start">
-            <h1>Revienta bloques</h1>
+        <div id="game-start">
+            <img class="start-imagen" src="images/image_inicio.png" alt="startGame">
             <button id="start-button">Play!</button>
             <br />
             <p>Use the left and right arrow to control the bar.</p>
-        </div> -->
+        </div>
         <div id="game-container">
+            <score id="score"></score>
             <div id="game-screen"></div>
         </div>
-        <!-- <div id="game-over">
-            <h1>Game Over!</h1>
+        <div id="game-over">
+            <img src="images/image_gameover.png" id="gameover-img" alt="gameOver">
             <img>
             <br />
             <button id="restart-button">Play again!</button>
-        </div> -->
+        </div>
     </main>
+
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/ball.js"></script>
     <script type="text/javascript" src="js/bar.js"></script>

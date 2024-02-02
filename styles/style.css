@@ -3,28 +3,69 @@ body {
     margin: 0;
     text-align: center;
     background-color: black;
-    font-family: 'Courier New', Courier, arial
+    font-family: 'Courier New', Courier, arial;
+    color: white
+}
+
+#game-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-imagen {
+    padding: 50px;
+}
+
+p {
+    margin-top: 50px;
+}
+
+#start-button {
+    font-size: 60px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 100px;
+    color: white;
+    border-style: 10px solid white;
+    font-family: 'Courier New', Courier, monospace
 }
 
 #game-screen {
     background-color: black;
-    position: relative;
 }
 
-body button {
+#game-over {
+    display: none;
+}
+
+#gameover-img {
+    margin-top: 100px;
+    padding: 50px;
+}
+
+#restart-button {
+    margin: 0 auto;
     font-size: 60px;
     background-color: black;
-    border-color: white;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 100px;
     color: white;
+    border-style: 10px solid white;
     font-family: 'Courier New', Courier, monospace
 }
 
-body h1 {
-    padding: 100px;
+#music {
+    display: none;
 }
 
-body p {
-    padding: 40px;
+#gameovermusic {
+    display: none;
+}
+
+#score {
+    color: yellow;
+    font-size: 2em;
 }

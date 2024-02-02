@@ -119,7 +119,7 @@ let bricksData = [
         color: "orange"
 
     },
-    {
+   {
         posLeft: 100,
         posTop: 150,
         color: "yellow"
@@ -179,6 +179,7 @@ let bricksData = [
         color: "yellow"
 
     },
+    
     {
         posLeft: 100,
         posTop: 200,
@@ -293,8 +294,7 @@ let bricksData = [
         color: "blue"
 
     },
-    {
-
+     {
         posLeft: 1060,
         posTop: 250,
         color: "blue"
@@ -371,22 +371,3 @@ let bricksData = [
 
 ]
 
-// createBricks() {
-
-//     for (let i = 0; i < 20; i++) {
-//         let oneBricks = 0
-//         oneBricks = [new Bricks(this.gameScreen, this.gameSize, this.posLeft, this.posTop)]
-//         this.bricksArray.push(oneBricks)
-//         return this.bricksArray
-//     }
-
-
-// }
-
-
-
-// for (let i = 0; i < 20; i++) {
-//     let oneBricks = 0
-//     oneBricks = [new Bricks(this.gameScreen, this.gameSize, this.posLeft, this.posTop)]
-//     this.bricksArray.push(oneBricks)
-//     return this.bricksArray 

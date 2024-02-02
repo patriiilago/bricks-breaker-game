@@ -30,8 +30,4 @@ class Brick {
         this.gameScreen.appendChild(this.element)
 
     }
-
-
-
-
 }
