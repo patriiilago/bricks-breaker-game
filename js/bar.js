@@ -29,7 +29,6 @@ class Bar {
         this.element.style.top = `${this.barPosition.top}px`
         this.element.style.left = `${this.barPosition.left}px`
         this.element.style.backgroundColor = this.barSpecs.background
-
         this.gameScreen.appendChild(this.element)
 
     }
@@ -44,18 +43,15 @@ class Bar {
             this.barPosition.left = this.gameSize.width - this.barSize.width
             this.barDirection.left = -1
         }
-
         this.updateBarPosition()
     }
 
     moveLeft() {
-
         this.barDirection.left = -3
 
     }
 
     moveRight() {
-
         this.barDirection.left = 3
     }
 

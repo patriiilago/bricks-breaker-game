@@ -26,7 +26,6 @@ class Brick {
         this.element.style.top = `${this.bricksPosition.top}px`
         this.element.style.left = `${this.bricksPosition.left}px`
         this.element.style.backgroundColor = this.bricksSpecs.background
-
         this.gameScreen.appendChild(this.element)
 
     }

@@ -56,7 +56,6 @@ class Game {
 
 
     createBricks() {
-
         bricksData.forEach((eachBrick) => {
             const newBrick = new Brick(this.gameScreen, this.gameSize, eachBrick.posLeft, eachBrick.posTop, eachBrick.color)
             this.bricks.push(newBrick)
@@ -116,8 +115,8 @@ class Game {
 
     displayPoints() {
         this.countPointsElements.innerHTML = `${this.countPoints} points`
-
     }
+
     pointCount() {
         this.countPoints += 10
         this.displayPoints()
