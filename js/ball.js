@@ -1,14 +1,12 @@
 class Ball {
-    gameEndScreen = document.querySelector("#game-over")
-    reStartButton = document.querySelector("#restart-button")
-    music = document.querySelector("#music")
-    // music2 = document.querySelector("#gameovermusic")
-
     constructor(gameScreen, gameSize, bar, brick) {
         this.gameScreen = gameScreen
         this.gameSize = gameSize
 
-
+        this.gameEndScreen = document.querySelector("#game-over")
+        this.reStartButton = document.querySelector("#restart-button")
+        this.music = document.querySelector("#music")
+        // music2 = document.querySelector("#gameovermusic")
 
         this.ballSize = {
             width: 40,
@@ -30,7 +28,6 @@ class Ball {
             top: 2,
 
         }
-
 
         this.element = document.createElement("div")
         this.element.style.position = 'absolute'
@@ -64,8 +61,7 @@ class Ball {
                 this.gameScreen.style.display = "none"
                 this.gameEndScreen.style.display = "block"
                 this.reStartButton.style.display = "block"
-                music.pause()
-                // music2.play()
+                this.music.pause()
                 clearInterval(this.gameInterval)
             }
         }

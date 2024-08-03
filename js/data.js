@@ -119,7 +119,7 @@ let bricksData = [
         color: "orange"
 
     },
-   {
+    {
         posLeft: 100,
         posTop: 150,
         color: "yellow"
@@ -179,7 +179,7 @@ let bricksData = [
         color: "yellow"
 
     },
-    
+
     {
         posLeft: 100,
         posTop: 200,
@@ -294,7 +294,7 @@ let bricksData = [
         color: "blue"
 
     },
-     {
+    {
         posLeft: 1060,
         posTop: 250,
         color: "blue"

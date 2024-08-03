@@ -1,11 +1,10 @@
 window.onload = function () {
     this.gameScreen = document.getElementById("game-screen")
     const startButton = document.querySelector("#start-button")
-    const restartButton = document.querySelector("#restart-button")
+    const restartButtons = document.querySelector("#restart-button")
     const gameOver = document.querySelector("#game-over")
     const gameStart = document.querySelector("#game-start")
     const music = document.querySelector("#music")
-    // const music2 = document.querySelector("#gameovermusic")
 
     let game
 
@@ -20,12 +19,13 @@ window.onload = function () {
         music.style.display = "none"
         this.gameScreen.style.display = "block"
         gameStart.style.display = "none"
-        restartButton.style.display = "none"
+        restartButtons.forEach(button => button.style.display = "none")
         gameOver.style.display = "none"
-        // music2.pause()
     }
 
-    restartButton.onclick = () => {
-        location.reload()
-    }
+    restartButtons.forEach(button => {
+        button.onclick = () => {
+            location.reload()
+        };
+    });
 }
