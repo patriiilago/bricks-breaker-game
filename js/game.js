@@ -86,13 +86,6 @@ class Game {
                 this.pointCount()
             }
         }
-        if (this.ball.hasCollidedBottom()) {
-            this.lives--;
-            if (this.lives <= 0) {
-                this.gameOver = true;
-                this.checkGameOver();
-            }
-        }
     }
 
     checkGameOver() {
