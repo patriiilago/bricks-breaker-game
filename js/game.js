@@ -20,7 +20,7 @@ class Game {
         this.lives = 1
         this.gameOver = false
         this.gameInterval = null
-        this.gameLoopFrequency = Math.round(1000 / 60)
+        this.gameLoopFrequency = Math.round(1000 / 0)
         this.restartButtons.forEach(button => {
             button.addEventListener("click", () => this.resetGame())
         })
