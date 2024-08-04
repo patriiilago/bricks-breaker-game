@@ -11,16 +11,16 @@ class Game {
         this.countPoints = 0
 
         this.gameSize = {
-            width: 1260,
-            height: window.innerHeight
+            width: gameScreenWidth,
+            height: gameScreenHeight
         }
 
         this.bar = undefined
         this.bricks = []
         this.lives = 1
         this.gameOver = false
-        this.gameInterval
-        this.gameLoopFrequency = Math.round(1000 / 0)
+        this.gameInterval = null
+        this.gameLoopFrequency = Math.round(1000 / 60)
         this.restartButtons.forEach(button => {
             button.addEventListener("click", () => this.resetGame())
         })
@@ -56,8 +56,8 @@ class Game {
 
 
     createBricks() {
-        bricksData.forEach((eachBrick) => {
-            const newBrick = new Brick(this.gameScreen, this.gameSize, eachBrick.posLeft, eachBrick.posTop, eachBrick.color)
+        bricksData.forEach((brickData) => {
+            const newBrick = new Brick(gameScreen, { width: gameScreenWidth, height: gameScreenHeight }, brickData.posLeft, brickData.posTop, brickData.color);
             this.bricks.push(newBrick)
         })
     }

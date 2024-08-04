@@ -1,5 +1,5 @@
 class Brick {
-    constructor(gameScreen, gameSize, posLeft, posTop, color) {
+    constructor(gameScreen, gameSize, posLeftPercentage, posTopPercentage, color) {
         this.gameScreen = gameScreen
         this.gameSize = gameSize
 
@@ -10,9 +10,9 @@ class Brick {
         }
 
         this.bricksPosition = {
-            left: posLeft,
-            top: posTop
-        }
+            left: (posLeftPercentage / 100) * this.gameSize.width,
+            top: (posTopPercentage / 100) * this.gameSize.height
+        };
 
         this.bricksSpecs = {
             background: color
