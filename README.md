@@ -12,4 +12,4 @@ The objective of the game is to break all the bricks on the screen using the bal
 
 **Demo**
 
-You can play the game live [here](https://blasdelezo1.github.io/brick-breaker-MVP/).
+You can play the game live [here]((https://bricks-breaker-pcgame.netlify.app/)).
